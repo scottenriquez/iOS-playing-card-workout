@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card Selection View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CardSelectionViewController" customModule="PlayingCardWorkout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10C" translatesAutoresizingMaskIntoConstraints="NO" id="Vgi-3k-OXO">
+                                <rect key="frame" x="132" y="243" width="150" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="GhJ-yE-Ma3"/>
+                                    <constraint firstAttribute="width" constant="150" id="txV-kk-Vg0"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bif-N2-Nkp">
+                                <rect key="frame" x="132" y="528" width="150" height="30"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="DmQ-qY-Pdo"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Stop"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wah-XA-0Ya">
+                                <rect key="frame" x="132" y="583" width="70" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="NsM-N7-AdN"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Start"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RF-F8-pUB">
+                                <rect key="frame" x="212" y="583" width="70" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Rules"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wah-XA-0Ya" firstAttribute="leading" secondItem="Bif-N2-Nkp" secondAttribute="leading" id="7BD-ag-rxc"/>
+                            <constraint firstItem="wah-XA-0Ya" firstAttribute="top" secondItem="Bif-N2-Nkp" secondAttribute="bottom" constant="25" id="QoA-ku-MHH"/>
+                            <constraint firstItem="8RF-F8-pUB" firstAttribute="trailing" secondItem="Bif-N2-Nkp" secondAttribute="trailing" id="aUF-hL-ghp"/>
+                            <constraint firstItem="Bif-N2-Nkp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nVw-Pe-8Jx"/>
+                            <constraint firstItem="Bif-N2-Nkp" firstAttribute="top" secondItem="Vgi-3k-OXO" secondAttribute="bottom" constant="35" id="oQR-fW-5He"/>
+                            <constraint firstItem="Vgi-3k-OXO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rQR-ap-IiW"/>
+                            <constraint firstItem="8RF-F8-pUB" firstAttribute="top" secondItem="Bif-N2-Nkp" secondAttribute="bottom" constant="25" id="sHR-jC-Gr7"/>
+                            <constraint firstItem="Vgi-3k-OXO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-80" id="tcN-uv-okj"/>
+                            <constraint firstItem="8RF-F8-pUB" firstAttribute="leading" secondItem="wah-XA-0Ya" secondAttribute="trailing" constant="10" id="xKn-8x-Idu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="10C" width="691" height="1056"/>
+    </resources>
+</document>
