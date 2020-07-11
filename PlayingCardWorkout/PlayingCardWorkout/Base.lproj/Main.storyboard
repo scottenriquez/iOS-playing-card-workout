@@ -30,6 +30,9 @@
                                 </constraints>
                                 <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BbP-If-HhI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wah-XA-0Ya">
                                 <rect key="frame" x="132" y="583" width="70" height="30"/>
@@ -39,12 +42,19 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="67c-bS-XRI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RF-F8-pUB">
                                 <rect key="frame" x="212" y="583" width="70" height="30"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Rules"/>
+                                <connections>
+                                    <action selector="rulesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ulx-ST-pgJ"/>
+                                    <segue destination="OPH-ob-weA" kind="presentation" id="eeM-Q2-DDX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -61,10 +71,62 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="Vgi-3k-OXO" id="m49-s7-KZ5"/>
+                        <outletCollection property="buttons" destination="Bif-N2-Nkp" collectionClass="NSMutableArray" id="Aoq-Zg-7Me"/>
+                        <outletCollection property="buttons" destination="wah-XA-0Ya" collectionClass="NSMutableArray" id="fhE-86-PNn"/>
+                        <outletCollection property="buttons" destination="8RF-F8-pUB" collectionClass="NSMutableArray" id="qbF-sU-J3R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tf9-Kz-jTR">
+            <objects>
+                <viewController id="OPH-ob-weA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YU7-bO-5cS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rules" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bf1-fO-rL5">
+                                <rect key="frame" x="30" y="70" width="354" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The value of each card represents the number of the exercise to do.  Jack is 11, queen is 12, king is 13, and ace is 14." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9g-Bi-HNV">
+                                <rect key="frame" x="30" y="153" width="354" height="101.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="♠︎ is for sit-ups ♣︎ is for push-ups ♥︎ is for crunches ♦︎ is for squats" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ke-4A-UWF">
+                                <rect key="frame" x="30" y="284.5" width="354" height="81.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ZGF-SY-OPJ" firstAttribute="trailing" secondItem="0ke-4A-UWF" secondAttribute="trailing" constant="30" id="7dF-Uz-5FS"/>
+                            <constraint firstItem="ZGF-SY-OPJ" firstAttribute="trailing" secondItem="M9g-Bi-HNV" secondAttribute="trailing" constant="30" id="FrJ-xO-Ue1"/>
+                            <constraint firstItem="Bf1-fO-rL5" firstAttribute="top" secondItem="ZGF-SY-OPJ" secondAttribute="top" constant="70" id="Gix-no-Zkb"/>
+                            <constraint firstItem="Bf1-fO-rL5" firstAttribute="leading" secondItem="ZGF-SY-OPJ" secondAttribute="leading" constant="30" id="LCS-3i-3Bm"/>
+                            <constraint firstItem="0ke-4A-UWF" firstAttribute="top" secondItem="M9g-Bi-HNV" secondAttribute="bottom" constant="30" id="Qlz-mY-R7t"/>
+                            <constraint firstItem="ZGF-SY-OPJ" firstAttribute="trailing" secondItem="Bf1-fO-rL5" secondAttribute="trailing" constant="30" id="W6O-f7-IPQ"/>
+                            <constraint firstItem="M9g-Bi-HNV" firstAttribute="top" secondItem="Bf1-fO-rL5" secondAttribute="bottom" constant="35" id="Zjk-sZ-igw"/>
+                            <constraint firstItem="0ke-4A-UWF" firstAttribute="leading" secondItem="ZGF-SY-OPJ" secondAttribute="leading" constant="30" id="gPF-bZ-qjf"/>
+                            <constraint firstItem="M9g-Bi-HNV" firstAttribute="leading" secondItem="ZGF-SY-OPJ" secondAttribute="leading" constant="30" id="wKX-zw-VXc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZGF-SY-OPJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b0U-Zo-Q8H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="941" y="138"/>
         </scene>
     </scenes>
     <resources>
