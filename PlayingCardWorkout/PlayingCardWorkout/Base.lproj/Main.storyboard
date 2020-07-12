@@ -52,7 +52,6 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Rules"/>
                                 <connections>
-                                    <action selector="rulesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ulx-ST-pgJ"/>
                                     <segue destination="OPH-ob-weA" kind="presentation" id="eeM-Q2-DDX"/>
                                 </connections>
                             </button>

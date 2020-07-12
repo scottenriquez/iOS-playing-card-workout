@@ -13,6 +13,7 @@
 		D8AE39EA24B4D6AF001275E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8AE39E924B4D6AF001275E2 /* Assets.xcassets */; };
 		D8AE39ED24B4D6AF001275E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8AE39EB24B4D6AF001275E2 /* LaunchScreen.storyboard */; };
 		D8AE39F524B4D861001275E2 /* CardSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE39F424B4D861001275E2 /* CardSelectionViewController.swift */; };
+		D8EC065824BABD4B0038B058 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EC065724BABD4B0038B058 /* Deck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D8AE39EC24B4D6AF001275E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8AE39EE24B4D6AF001275E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8AE39F424B4D861001275E2 /* CardSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSelectionViewController.swift; sourceTree = "<group>"; };
+		D8EC065724BABD4B0038B058 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				D8AE39E024B4D6AE001275E2 /* AppDelegate.swift */,
 				D8AE39E224B4D6AE001275E2 /* SceneDelegate.swift */,
+				D8EC065724BABD4B0038B058 /* Deck.swift */,
 				D8AE39F424B4D861001275E2 /* CardSelectionViewController.swift */,
 				D8AE39E624B4D6AE001275E2 /* Main.storyboard */,
 				D8AE39E924B4D6AF001275E2 /* Assets.xcassets */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8EC065824BABD4B0038B058 /* Deck.swift in Sources */,
 				D8AE39E124B4D6AE001275E2 /* AppDelegate.swift in Sources */,
 				D8AE39E324B4D6AE001275E2 /* SceneDelegate.swift in Sources */,
 				D8AE39F524B4D861001275E2 /* CardSelectionViewController.swift in Sources */,
